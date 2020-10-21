@@ -1,1 +1,23 @@
 @color:#ff5e46;
+@color-3:#333;
+@color-6:#666;
+@color-9:#999;
+//flex布局的复用代码
+.layout-flex(@direction:row,@justify:space-around,@align:center){
+	display: flex;
+	flex-direction: @direction;
+	justify-content: @justify;
+	align-items: @align;
+}
+//首页内容板块通用样式
+.content(@padding:.2rem){
+	width: 100%;
+	padding: @padding;
+	background-color: #fff;
+	margin-top: .2rem;
+}
+body{
+	font-size: 0.16rem;
+	background-color: #eee;
+}
+*{box-sizing: border-box;}

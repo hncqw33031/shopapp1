@@ -5,7 +5,7 @@
 </template>
 <script>
 	document.documentElement.style.fontSize=window.innerWidth/7.5+"px";
-	window.onResize=function(){
+	window.onresize=function(){
 		document.documentElement.style.fontSize=window.innerWidth/7.5+"px"
 	}
 </script>

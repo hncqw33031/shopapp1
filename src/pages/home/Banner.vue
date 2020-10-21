@@ -11,15 +11,11 @@
 		Swiper,
 		SwiperSlide
 	} from 'vue-awesome-swiper'
-
-	// import style (<= Swiper 5.x)
 	import 'swiper/css/swiper.css'
-
-	// import style (>= Swiper 6.x)
-	// import 'swiper/swiper-bundle.css'
-
-
 	export default {
+		props:{
+			swiperList:Array
+		},
 		components: {
 			Swiper,
 			SwiperSlide
@@ -37,11 +33,6 @@
 
 					// Some Swiper option/callback...
 				},
-				swiperList: [
-					'//picasso.alicdn.com/imgextra/i3/382208/O1CNA1iyU1IP100ff4af62860b14de730004_!!382208-0-picassobanner.jpg',
-					'https://aecpm.alicdn.com/simba/img/TB1CWf9KpXXXXbuXpXXSutbFXXX.jpg_q50.jpg',
-					'https://gw.alicdn.com/imgextra/i4/130/O1CN01rl6AUW1Cpa7QeEvPv_!!130-0-ppp-picassogw.jpg'
-				]
 			}
 		}
 	}
