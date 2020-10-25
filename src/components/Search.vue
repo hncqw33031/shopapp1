@@ -22,6 +22,7 @@ export default{
 	width: 100%;
 	height: 0.88rem;
 	position: fixed;
+	z-index: 9999;
 	top: 0.88rem;
 	left: 0;
 	background-color: @color;

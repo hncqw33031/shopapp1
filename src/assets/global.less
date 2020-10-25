@@ -16,8 +16,40 @@
 	background-color: #fff;
 	margin-top: .2rem;
 }
+.pic-container(@width:2rem,@picHeight:2.1rem){
+	border-radius: .1rem;
+	border: 1px solid #eee;
+	flex-shrink: 0;
+	width:@width;
+	overflow: hidden;
+	margin-right: .2rem;
+	padding-bottom: 0.2rem;
+	.img-box{
+		width: 100%;
+		height: @picHeight;
+		overflow: hidden;
+		img{
+			width: 100%;
+		}
+	}
+	.goods-info{
+		font-weight: 600;
+		.goods-name{
+			overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+			padding: 0 .1rem;
+			margin-bottom: .4rem;
+			color: @color-6;
+		}
+		.goods-price{
+			padding-left: 0.1rem;
+			color: @color;
+		}
+	}
+}
 body{
 	font-size: 0.16rem;
 	background-color: #eee;
 }
+body,p,ul,ol{margin: 0;}
+ul,ol{padding: 0;}
 *{box-sizing: border-box;}

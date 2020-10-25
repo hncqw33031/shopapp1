@@ -46,7 +46,6 @@
 	@import url("~@/assets/global.less");
 	.banner {
 		margin-top: 1.76rem;
-
 		img {
 			width: 100%;
 		}

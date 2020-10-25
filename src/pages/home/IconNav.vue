@@ -1,7 +1,7 @@
 <template>
 <div class="nav-container">
 	<div v-for="item of navList" :key="item.id" class="nav-item">
-		<img :src="item.img" alt="">
+		<img v-lazy="item.img" alt="">
 		<span>{{item.name}}</span>
 	</div>
 </div>

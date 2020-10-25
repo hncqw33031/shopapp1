@@ -12,13 +12,13 @@ export default{
 			default:"QianQian左右鞋包"
 		},
 		back:{
-			type:Boolean,
-			default:false
+			type:String,
+			default:""
 		}
 	},
 	methods:{
 		toBack(){
-			console.log(66666);
+			this.$router.push(this.back)
 		}
 	}
 }
@@ -32,6 +32,7 @@ export default{
 	text-align: center;
 	font-size: 0.36rem;
 	position: fixed;
+	z-index: 9999;
 	top: 0;
 	left: 0;
 	color: #fff;
