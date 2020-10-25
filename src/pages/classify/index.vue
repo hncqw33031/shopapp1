@@ -44,7 +44,6 @@ export default{
 		async getCategory(){
 			const category=await this.axios.get('api/goods_category?type=1')
 			this.category=category
-			console.log(category);
 			if(category.length>0){
 				this.getSubCategory(category[0].cat_id)
 			}
@@ -52,7 +51,6 @@ export default{
 		//获取二级分类
 		async getSubCategory(catId){
 			this.subCategory=await this.axios.get('api/goods_category?type=1&cat_id='+catId)
-			console.log(this.subCategory);
 		},
 		loadSubCategory(catId){
 			this.getSubCategory(catId)
