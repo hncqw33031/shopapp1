@@ -42,15 +42,19 @@ export default{
 	methods:{
 		//获取一级分类
 		async getCategory(){
+			this.$showLoading()
 			const category=await this.axios.get('api/goods_category?type=1')
 			this.category=category
+			this.$hideLoading()
 			if(category.length>0){
 				this.getSubCategory(category[0].cat_id)
 			}
 		},
 		//获取二级分类
 		async getSubCategory(catId){
+			this.$showLoading()
 			this.subCategory=await this.axios.get('api/goods_category?type=1&cat_id='+catId)
+			this.$hideLoading()
 		},
 		loadSubCategory(catId){
 			this.getSubCategory(catId)

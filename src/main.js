@@ -7,6 +7,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import VueLazyload from 'vue-lazyload'
+import Loading from './public/loading'
 
 // axios.defaults.baseURL='/api/'
 // axios.defaults.timeout=8000
@@ -30,6 +31,7 @@ Vue.config.productionTip = false;
 Vue.use(VueLazyload, {
   loading: 'images/loading-svg/loading-spinning-bubbles(旋转).svg',
 })
+Vue.use(Loading)
 new Vue({
   router,
   store,

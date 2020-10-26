@@ -12,6 +12,6 @@
 <style lang="less">
 	@import  '~@/assets/normalize.css';
 	@import  './assets/border.css';
-	@import url("//at.alicdn.com/t/font_1486515_bbrks79p7re.css");
+	@import url("//at.alicdn.com/t/font_1486515_qdsty661ypk.css");
 
 </style>

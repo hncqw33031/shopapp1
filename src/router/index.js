@@ -29,10 +29,10 @@ const routes = [
 	  component: My
   },
   {
-	  path: "/goodList/:cid",
+	  path: "/goodList",
 	  name: "GoodList", 
 	  props:route=>{
-		  let cid=route.params.cid||0
+		  let cid=route.query.cid||0
 		  let cName=route.query.name||""
 		  if(isNaN(cid)){
 			  cid=0

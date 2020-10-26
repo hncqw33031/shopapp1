@@ -27,6 +27,7 @@
 					<div class="goods-info">
 						<div class="goods-name">{{item.name}}</div>
 						<div class="goods-price">￥{{item.price|getPrice}}</div>
+						<add-shopcar font-size=".28rem" :goods="item"></add-shopcar>
 					</div>
 				</div>
 			</div>
@@ -38,12 +39,14 @@
 import BScroll from 'better-scroll'
 import FromatPrice from '@/utils/function.js'
 import Container from './Container.vue'
+import AddShopcar from '@/components/AddShopcar.vue'
 export default{
 	props:{
 		recommendList:Array
 	},
 	components:{
-		Container
+		Container,
+		AddShopcar
 	},
 	computed:{
 		show(){

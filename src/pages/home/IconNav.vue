@@ -1,9 +1,13 @@
 <template>
 <div class="nav-container">
-	<div v-for="item of navList" :key="item.id" class="nav-item">
+	<!-- <div v-for="item of navList" :key="item.id" class="nav-item">
 		<img v-lazy="item.img" alt="">
 		<span>{{item.name}}</span>
-	</div>
+	</div> -->
+	<router-link tag="div" :to="'/goodList?name='+item.name" v-for="item of navList" :key="item.id" class="nav-item">
+		<img v-lazy="item.img" alt="">
+		<span>{{item.name}}</span>
+	</router-link>
 </div>
 </template>
 <script>

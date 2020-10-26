@@ -53,13 +53,15 @@ export default{
 			busy:false
 		}
 	},
-	mounted() {
-		this.getSwiper()
-		this.getIconNav()
-		this.getRecommend()
-		this.getSales()
-		this.getNewGoods()
-		this.getGoodList()
+	async mounted() {
+		this.$showLoading()
+		await this.getSwiper()
+		await this.getIconNav()
+		await this.getRecommend()
+		await this.getSales()
+		await this.getNewGoods()
+		// await this.getGoodList()
+		this.$hideLoading()
 	},
 	methods:{
 		async getSwiper(){
@@ -130,7 +132,8 @@ export default{
 		},
 		async loadMore(){
 			this.busy=true;
-			if(this.page<=this.totalPage){
+			// console.log(this.page,this.totalPage);
+			if(this.page<=this.totalPage||this.totalPage===0){
 				await this.getGoodList()
 				this.busy=false;
 			}
