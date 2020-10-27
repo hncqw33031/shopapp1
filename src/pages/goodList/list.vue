@@ -14,7 +14,7 @@
 					<div class="sale_num">
 						<span>{{item.sale_num}}浏览</span>
 					</div>
-					<div class="buy">立即购买</div>
+					<add-shopcar font-size=".28rem" :goods="item"></add-shopcar>
 				</div>
 			</div>
 		</div>
@@ -22,6 +22,7 @@
 </template>
 <script>
 	import FromatPrice from '@/utils/function.js'
+	import AddShopcar from '@/components/AddShopcar.vue'
 	export default {
 		props: {
 			goodsList: Array
@@ -30,6 +31,9 @@
 			getPrice(price) {
 				return FromatPrice.fromatPrice(price)
 			}
+		},
+		components:{
+			AddShopcar
 		}
 	}
 </script>
@@ -89,20 +93,6 @@
 					.sale_num {
 						font-size: .22rem;
 						color: @color-9;
-					}
-
-					.buy {
-						position: absolute;
-						width: 1.4rem;
-						height: .5rem;
-						border-radius: .25rem;
-						right: 0;
-						bottom: 0;
-						background-color: @color;
-						text-align: center;
-						line-height: .5rem;
-						font-size: .24rem;
-						color: #fff;
 					}
 				}
 			}

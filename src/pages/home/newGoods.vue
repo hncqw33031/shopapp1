@@ -9,6 +9,7 @@
 				<div class="goods-info">
 					<div class="goods-name">{{item.name}}</div>
 					<div class="goods-price">￥{{item.price|getPrice}}</div>
+					<add-shopcar font-size=".28rem" :goods="item"></add-shopcar>
 				</div>
 			</div>
 		</div>
@@ -18,12 +19,14 @@
 <script>
 	import Container from './Container.vue'
 	import FromatPrice from '@/utils/function.js'
+	import AddShopcar from '@/components/AddShopcar.vue'
 export default{
 	props:{
 		newList:Array
 	},
 	components:{
 		Container,
+		AddShopcar
 	},
 	data(){
 		return {

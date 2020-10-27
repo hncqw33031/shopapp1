@@ -10,6 +10,7 @@
 					<div class="goods-info">
 						<div class="goods-name">{{val.name}}</div>
 						<div class="goods-price">￥{{val.price|getPrice}}</div>
+						<add-shopcar font-size=".28rem" :goods="val"></add-shopcar>
 					</div>
 				</div>
 			</swiper-slide>
@@ -19,6 +20,7 @@
 </container>	
 </template>
 <script>
+	import AddShopcar from '@/components/AddShopcar.vue'
 	import Container from './Container.vue'
 	import {
 		Swiper,
@@ -38,7 +40,8 @@ export default{
 	components:{
 		Container,
 		Swiper,
-		SwiperSlide
+		SwiperSlide,
+		AddShopcar
 	},
 	watch:{
 		salesList(newVal){
