@@ -5,6 +5,8 @@ import Classify from "../pages/classify/index.vue";
 import ShopCar from "../pages/shopCar/index.vue";
 import My from "../pages/my/index.vue";
 import GoodList from '../pages/goodList/index.vue'
+import GoodDetail from '../pages/goodsDetail/index.vue'
+import GoodsError from '../pages/goodsError/index.vue'
 Vue.use(VueRouter);
 
 const routes = [
@@ -29,6 +31,11 @@ const routes = [
 	  component: My
   },
   {
+  	  path: "/goodsError",
+  	  name: "GoodsError",
+  	  component: GoodsError
+  },
+  {
 	  path: "/goodList",
 	  name: "GoodList", 
 	  props:route=>{
@@ -43,6 +50,28 @@ const routes = [
 		  }
 	  },
 	  component: GoodList
+  },
+  {
+	 path:'/goodsDetail',
+	 redirect:"/" //重定向到首页
+  },
+  {
+	  path: "/goodsDetail/:id",
+	  beforeEnter(to,from,next){ 
+		  const id=to.params.id
+		  if(!/^\d+$/.test(id)){
+			  next(from.path)
+		  }else{
+			  next()
+		  }
+	  },
+	  props:route=>{
+		return {
+			id:parseInt(route.params.id)
+		}
+	  },
+	  name:'GoodsDetail',
+	  component: GoodDetail
   }
 ];
 

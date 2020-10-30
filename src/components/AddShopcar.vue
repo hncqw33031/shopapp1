@@ -30,7 +30,8 @@
 			}
 		},
 		methods: {
-			addToShopcar() {
+			addToShopcar(e) {
+				e.stopPropagation()
 				if (Object.keys(this.goods).length === 0) {
 					return
 				}
@@ -70,7 +71,6 @@
 </script>
 <style lang="less">
 	@import url("~@/assets/global.less");
-
 	.add-shopcar {
 		position: absolute;
 		right: 0.1rem;

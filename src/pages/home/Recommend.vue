@@ -1,26 +1,9 @@
 <template>
-<!-- <div class="recommend-container" v-if="show">
-	<div class="title">
-		<span class="left">精品推荐</span>
-		<span class="right">更多<span class="iconfont icon-gengduo"></span></span>
-	</div>
-	<div class="goods-list-container" ref="wrapper">
-		<div class="goods-list" ref="goodsList">
-			<div class="goods-item" v-for="item of recommendList" :key="item.id">
-				<img :src="item.img" alt="">
-				<div class="goods-info">
-					<div class="goods-name">{{item.name}}</div>
-					<div class="goods-price">￥{{item.price|getPrice}}</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
 <container main="精品推荐" morePath="/goods-list">
 	<template v-slot:content>
 		<div class="goods-list-container" ref="wrapper">
 			<div class="goods-list" ref="goodsList">
-				<div class="goods-item" v-for="item of recommendList" :key="item.id">
+				<router-link tag="div" :to="`/goodsDetail/${item.id}`" class="goods-item" v-for="item of recommendList" :key="item.id">
 					<div class="img-box">
 						<img v-lazy="item.img" alt="">
 					</div>
@@ -29,7 +12,7 @@
 						<div class="goods-price">￥{{item.price|getPrice}}</div>
 						<add-shopcar font-size=".28rem" :goods="item"></add-shopcar>
 					</div>
-				</div>
+				</router-link>
 			</div>
 		</div>
 	</template>

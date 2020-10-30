@@ -19,5 +19,8 @@
 	}
 	body,p,ul,ol{margin: 0;}
 	ul,ol{padding: 0;}
+	ul{
+		list-style: none;
+	}
 	*{box-sizing: border-box;}
 </style>

@@ -132,7 +132,6 @@ export default{
 		},
 		async loadMore(){
 			this.busy=true;
-			// console.log(this.page,this.totalPage);
 			if(this.page<=this.totalPage||this.totalPage===0){
 				await this.getGoodList()
 				this.busy=false;
